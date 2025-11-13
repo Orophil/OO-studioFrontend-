@@ -1,0 +1,151 @@
+/* ===== OUTER CONTAINER (glass border frame) ===== */
+.card3-container {
+  display: flex;
+  height: 216.783px;
+  padding: 5.692px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.486px;
+  align-self: stretch;
+  border-radius: 32.142px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    8.036px 8.036px 57.253px -34.151px rgba(0, 0, 0, 0.25) inset,
+    2.714px 2.714px 4.018px -2.36px #333 inset,
+    -2.714px -2.714px 0 -2.36px #262626 inset,
+    2.714px 2.714px 10.396px -2.714px rgba(255, 255, 255, 0.20) inset,
+    -2.714px -2.714px 8.387px -2.714px rgba(255, 255, 255, 0.20) inset,
+    0 0 8.142px 0 rgba(255, 255, 255, 0.10) inset,
+    17.076px 17.076px 43.424px -8.036px #F5F5F5 inset,
+    -17.076px -17.076px 43.424px -8.036px #131313 inset,
+    0 5.022px 44.196px -10.044px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== INNER CARD (main content area) ===== */
+.card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10.044px;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 24px;
+  border-radius: 26.116px;
+  background: linear-gradient(146deg, rgba(113, 117, 116, 0.85) 17.02%, rgba(55, 61, 60, 0.85) 76.92%);
+  box-shadow:
+    0 0 60.839px -24.475px rgba(40, 47, 56, 0.31) inset,
+    3.496px 3.496px 21.096px -4.662px rgba(255, 255, 255, 0.45) inset,
+    -3.496px -3.496px 19.813px -8.158px rgba(0, 0, 0, 0.15) inset;
+  background-blend-mode: plus-lighter;
+  box-shadow: 0 5.022px 35.156px -8.036px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10.044445991516113px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== CARD CONTENT ===== */
+.card3-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  width: 100%;
+  z-index: 2;
+}
+
+/* ===== TOP ROW ===== */
+.stat3-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat3-top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat3-top-left svg {
+  width: 28px;
+  height: 28px;
+}
+
+.stat3-top-text {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ===== BOTTOM TEXT ===== */
+.stat3-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+}
+
+.stat3-label {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.stat3-count-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* BIG NUMBER */
+.stat-glasseffect3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.stat3-subtext {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* ===== FOLDER ILLUSTRATION ===== */
+.stat3-illustration {
+  position: absolute;
+  right: -50px;
+  bottom: 20px;
+  width: 180px;
+  height: 180px;
+  z-index: 1;
+  object-fit: contain;
+  transform: perspective(1000px) rotateY(-20deg) rotateX(5deg);
+  filter: brightness(1.1);
+}
+
+/* ===== BOUNCE LIGHT (subtle highlight) ===== */
+.bouncelight {
+  width: 210.001px;
+  height: 210.313px;
+  position: absolute;
+  right: -0.001px;
+  bottom: -0.313px;
+  border-radius: 26.116px;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow:
+    inset -2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px -2px 8px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 0;
+}

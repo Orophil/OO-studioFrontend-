@@ -1,0 +1,86 @@
+.Profile-button-container{
+    display: flex;
+padding: 5px;
+justify-content: center;
+align-items: center;
+gap: 3px;
+border-radius: 999px;
+}
+.glass{
+    width: 42px;
+height: 42px;
+position: absolute;
+left: 0;
+top: 0;
+border-radius: 22.4px;
+background: rgba(0, 0, 0, 0.01);
+box-shadow: 0 2.8px 2.8px 0 rgba(255, 255, 255, 0.15) inset, 0 10.5px 17.5px 0 rgba(0, 0, 0, 0.15), 0 9.1px 13.86px 0 rgba(0, 0, 0, 0.18) inset, 0 -1.56px 1px -1px rgba(255, 255, 255, 0.68) inset, 0 1.56px 1px -1px rgba(255, 255, 255, 0.80) inset, 0 0 2.8px 0 rgba(0, 0, 0, 0.60) inset;
+z-index: 3;
+pointer-events: none;
+}
+.light{
+    width: 30px;
+height: 27px;
+position: absolute;
+right: 9.8px;
+bottom: 11px;
+border-radius: 22.4px;
+opacity: 0.4;
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: plus-lighter;
+box-shadow: 0 -9px 12.1px -4px rgba(255, 255, 255, 0.68) inset;
+filter: blur(5.400000095367432px);
+z-index: 2;
+pointer-events: none;
+}
+.layer{
+    width: 42px;
+height: 42px;
+position: absolute;
+left: 0;
+top: 0;
+border-radius: 22.4px;
+background: linear-gradient(0deg, rgba(0, 191, 165, 0.35) 0%, rgba(0, 191, 165, 0.35) 100%), rgba(106, 115, 116, 0.31);
+box-shadow: 0 0 0.5px 0.6px rgba(38, 47, 50, 0.30);
+backdrop-filter: blur(4px);
+z-index: 1;
+pointer-events: none;
+}
+
+.profile-base{
+    width: 42px;
+    height: 42px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6FB5AE 0%, #4A8A84 50%, #5A9A94 100%);
+}
+
+.profile-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+}
+
+.profile-letter{
+    color: #FFFFFF;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 100;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}

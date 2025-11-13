@@ -1,0 +1,132 @@
+.storage-card {
+  position: relative;
+  width: 268px;
+  height: 148px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+}
+
+/* Corner accent styling - top-left */
+.storage-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 60px;
+  height: 60px;
+  border-top: 2px solid rgba(0, 174, 255, 0.6);
+  border-left: 2px solid rgba(0, 174, 255, 0.6);
+  border-top-left-radius: 16px;
+  pointer-events: none;
+}
+
+/* Corner accent styling - bottom-right */
+.storage-card::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 60px;
+  height: 60px;
+  border-bottom: 2px solid rgba(0, 174, 255, 0.6);
+  border-right: 2px solid rgba(0, 174, 255, 0.6);
+  border-bottom-right-radius: 16px;
+  pointer-events: none;
+}
+
+.storage-card__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.storage-card__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.storage-card__percentage {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.storage-card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.storage-card__info {
+  flex: 1;
+}
+
+.storage-card__label {
+  color: rgba(255, 255, 255, 0.65);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0 0 4px 0;
+}
+
+.storage-card__usage {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.storage-card__used {
+  color: #FFF;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.storage-card__total {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.storage-card__progress {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.storage-card__progress-bar {
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF4444 0%, #FF6B6B 100%);
+  border-radius: 2px;
+}
+
+.storage-card__device {
+  flex-shrink: 0;
+  width: 80px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.storage-card__device-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: rotate(-15deg);
+}

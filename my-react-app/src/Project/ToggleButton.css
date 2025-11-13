@@ -1,0 +1,22 @@
+.toggle-glass{
+    width: 63px;
+height: 36px;
+    position: absolute;
+left: 0;
+    border-radius: 22.4px;
+background: rgba(0, 0, 0, 0.01);
+box-shadow: 0 2.8px 2.8px 0 rgba(255, 255, 255, 0.15) inset, 0 10.5px 17.5px 0 rgba(0, 0, 0, 0.15), 0 9.1px 13.86px 0 rgba(0, 0, 0, 0.18) inset, 0 -1.56px 1px -1px rgba(255, 255, 255, 0.68) inset, 0 1.56px 1px -1px rgba(255, 255, 255, 0.80) inset, 0 0 2.8px 0 rgba(0, 0, 0, 0.60) inset;
+}
+.toggle-light{
+    width: 51px;
+height: 27px;
+position: absolute;
+right: 5.8px;
+bottom: 0;
+border-radius: 22.4px;
+opacity: 0.4;
+background: rgba(255, 255, 255, 0.01);
+background-blend-mode: plus-lighter;
+box-shadow: 0 -9px 12.1px -4px rgba(255, 255, 255, 0.68) inset;
+filter: blur(5.400000095367432px);
+}

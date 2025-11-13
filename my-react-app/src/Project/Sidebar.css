@@ -1,0 +1,222 @@
+/* ------- Page background image (visible through the sidebar) ------- */
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-image: url('/images/app-bg.jpg'); /* ⬅️ put your image path here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Optional: nicer text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------- Fonts used by labels/counts ------- */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* If you're using Satoshi Variable for the brand text */
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* ------- Sidebar (glassy) ------- */
+.sidebar {
+  display: flex;
+  width: 223px;
+  height: 100vh;
+  padding: 16px 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  /* translucent + blur so background image shows through */
+  /* background: rgba(90, 100, 100, 0.84); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* subtle edge definition */
+  /* border-right: 1px solid rgba(255, 255, 255, 0.12); */
+  box-sizing: border-box;
+  transition: width 300ms ease;
+}
+
+/* Collapsed sidebar */
+.sidebar--closed {
+  width: 68px;
+}
+
+.sidebar--open {
+  width: 223px;
+}
+
+/* Inner stack */
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  height: 100%;
+}
+
+/* ------- Brand row ------- */
+.oostudio-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 6px;
+  transition: justify-content 300ms ease;
+}
+
+.sidebar--closed .oostudio-brand {
+  justify-content: center;
+  padding: 4px;
+}
+
+.oostudio-brand__logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;                 /* rounded tile like your mock */
+  object-fit: contain;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+}
+
+.oostudio-brand__text {
+  color: #FFF;
+  font-family: "Satoshi Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px; /* 116.667% */
+}
+
+/* ------- Menu ------- */
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+
+.sidebar__menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 160ms ease;
+}
+
+.sidebar--closed .sidebar__menu-item {
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.sidebar__menu-item:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sidebar__menu-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar__menu-icon {
+  display: inline-flex;
+  color: rgba(255,255,255,0.9); /* fallback; your React prop still sets icon color */
+}
+
+.sidebar__menu-label {
+  color: rgba(255,255,255,0.85);
+  font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.5px;
+  text-align: left;
+}
+
+.sidebar__menu-count {
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Active row = bolder label, white count + gradient bottom line */
+.sidebar__menu-item.is-active .sidebar__menu-label {
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar__menu-item.is-active .sidebar__menu-count {
+  color: #fff;
+}
+
+.sidebar__menu-item.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 1px;
+  align-self: stretch;
+  background: linear-gradient(
+    270deg,
+    rgba(171, 201, 196, 0.01) 2%,
+    rgba(171, 201, 196, 0.80) 12%,
+    rgba(184, 199, 200, 0.80) 27%,
+    rgba(171, 201, 196, 0.80) 36%,
+    rgba(171, 201, 196, 0.00) 100%
+  );
+}
+
+.sidebar--closed .sidebar__menu-item.is-active::after {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: 40px;
+}
+
+/* Bottom icon with circular background */
+.sidebar__bottom-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background 160ms ease, margin-left 300ms ease, margin-right 300ms ease;
+}
+
+.sidebar--open .sidebar__bottom-icon {
+  margin-left: auto;
+  margin-right: 6px;
+}
+
+.sidebar--closed .sidebar__bottom-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar__bottom-icon:hover {
+  background: rgba(0, 0, 0, 0.25);
+}

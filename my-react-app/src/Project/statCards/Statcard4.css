@@ -1,0 +1,136 @@
+.glass-effect{
+    width: 452px;
+height: 226px;
+}
+
+.statcard4-container {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  height: 220px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  /* Glassy effect background */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle inner glow */
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.statcard4-content {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+  flex: 1;
+  /* Enhanced glass layer */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 24px 0 0 24px;
+}
+
+.statcard4-text {
+  color: white;
+}
+
+.statcard4-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.5px;
+}
+
+.statcard4-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+.statcard4-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 14px 50px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.statcard4-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.statcard4-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+}
+
+.statcard4-image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 30%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.statcard4-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .statcard4-container {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .statcard4-content {
+    padding: 30px;
+  }
+
+  .statcard4-title {
+    font-size: 36px;
+  }
+
+  .statcard4-description {
+    font-size: 14px;
+  }
+
+  .statcard4-image {
+    width: 100%;
+    opacity: 0.3;
+  }
+}

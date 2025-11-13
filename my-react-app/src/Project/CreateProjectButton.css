@@ -1,0 +1,74 @@
+.button-container{
+    display: flex;
+height: 36px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+.button{
+    display: flex;
+height: 36px;
+padding: 0 18px;
+justify-content: center;
+align-items: center;
+gap: var(--spacing-0, 0);
+flex-shrink: 0;
+}
+.button-glow{
+    display: flex;
+height: 36px;
+padding: 0 18px;
+justify-content: center;
+align-items: center;
+gap: var(--spacing-0, 0);
+flex-shrink: 0;
+}
+.button-base{
+    display: flex;
+width: 139px;
+height: 36px;
+padding: 1px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+filter: drop-shadow(0px 4px 12px rgba(139, 169, 165, 0.6))
+        drop-shadow(0px 2px 6px rgba(139, 169, 165, 0.4));
+}
+.button-base1{
+    display: flex;
+padding: 2px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 999px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #DBE6E6 0%, #565958 50%, #8BA9A5 100%);
+}
+.button-fill{
+    display: flex;
+padding: 10px;
+align-items: center;
+justify-content: center;
+gap: 10px;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 999px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #BBBEBD 0%, #7E8A87 100%);
+}
+.content{
+    display: flex;
+    padding: var(--spacing-0, 0);
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background: transparent;
+    color: #2C3534;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+}
