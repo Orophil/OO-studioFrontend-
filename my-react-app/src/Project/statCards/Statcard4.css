@@ -7,15 +7,9 @@
   padding: 4px;
   justify-content: center;
   align-items: center;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    /* Subtle inner depth */
-    inset 2px 2px 8px rgba(0, 0, 0, 0.15),
-    inset -2px -2px 8px rgba(255, 255, 255, 0.15),
-    /* Outer elevation */
-    0 4px 20px rgba(0, 0, 0, 0.25),
-    0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 32.142px 30.133px;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 8.036px 8.036px 57.253px -34.151px rgba(0, 0, 0, 0.25) inset, 2.714px 2.714px 4.018px -2.36px #333 inset, -2.714px -2.714px 0 -2.36px #262626 inset, 2.714px 2.714px 10.396px -2.714px rgba(255, 255, 255, 0.20) inset, -2.714px -2.714px 8.387px -2.714px rgba(255, 255, 255, 0.20) inset, 0 0 8.142px 0 rgba(255, 255, 255, 0.10) inset, 17.076px 17.076px 43.424px -8.036px #F5F5F5 inset, -17.076px -17.076px 43.424px -8.036px #131313 inset, 0 5.022px 44.196px -10.044px rgba(0, 0, 0, 0.35);
 }
 
 /* ===== INNER CONTAINER (main card) ===== */
@@ -24,15 +18,10 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 26.116px;
   overflow: hidden;
-  background: linear-gradient(145deg, rgba(108, 117, 119, 0.92) 0%, rgba(65, 72, 73, 0.92) 100%);
-  box-shadow:
-    /* Soft inner highlights */
-    inset 2px 2px 10px rgba(255, 255, 255, 0.12),
-    inset -2px -2px 10px rgba(0, 0, 0, 0.25),
-    /* Outer depth */
-    0 4px 16px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: 8.036px 8.036px 57.253px -34.151px rgba(0, 0, 0, 0.25) inset, 2.714px 2.714px 0 -2.36px #333 inset, -2.714px -2.714px 0 -2.36px #262626 inset, 2.714px 2.714px 1.357px -2.714px #FFF inset, -2.714px -2.714px 1.357px -2.714px #FFF inset, 0 0 8.142px 0 rgba(255, 255, 255, 0.10) inset, 17.076px 17.076px 43.424px -8.036px #F5F5F5 inset, -17.076px -17.076px 43.424px -8.036px #131313 inset;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -122,7 +111,7 @@
 .bouncelight4 {
   position: absolute;
   inset: 0;
-  border-radius: 20px;       /* match container */
+  border-radius: 26.116px;       /* match container */
   background: rgba(255, 255, 255, 0.02);
   box-shadow:
     inset -2px 2px 4px rgba(255, 255, 255, 0.1),
@@ -136,16 +125,16 @@
   .statcard4-outer-container {
     max-width: 100%;
     height: 230px;
-    border-radius: 20px;
+    border-radius: 32.142px 30.133px;
     padding: 4px;
   }
 
   .statcard4-container {
-    border-radius: 18px;
+    border-radius: 26.116px;
   }
 
   .bouncelight4 {
-    border-radius: 18px;
+    border-radius: 26.116px;
   }
 
   .statcard4-content {
@@ -170,16 +159,16 @@
 @media (max-width: 480px) {
   .statcard4-outer-container {
     height: 210px;
-    border-radius: 18px;
+    border-radius: 32.142px 30.133px;
     padding: 3px;
   }
 
   .statcard4-container {
-    border-radius: 16px;
+    border-radius: 26.116px;
   }
 
   .bouncelight4 {
-    border-radius: 16px;
+    border-radius: 26.116px;
   }
 
   .statcard4-content {
@@ -204,16 +193,16 @@
 @media (max-width: 360px) {
   .statcard4-outer-container {
     height: 190px;
-    border-radius: 16px;
+    border-radius: 32.142px 30.133px;
     padding: 3px;
   }
 
   .statcard4-container {
-    border-radius: 14px;
+    border-radius: 26.116px;
   }
 
   .bouncelight4 {
-    border-radius: 14px;
+    border-radius: 26.116px;
   }
 
   .statcard4-content {
