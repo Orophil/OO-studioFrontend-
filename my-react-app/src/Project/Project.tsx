@@ -145,23 +145,22 @@ const Project: React.FC = () => {
             </div>
              
             {/* Scrollable Content */}
-            <div className="main-content min-w-0  w-full h-screen pb-6">
-              {/* Stats Cards Grid */}
-              
-               <div className="stats-grid">
-                {/* Storage Used Card */}
-                <Statcard />
-                <StatCard2/>
-                <Statcard3/>
-                <Statcard4/>
-              </div>
+            {/* <div className="main-content"> */}
+              {/* Stats Cards Grid */}              
+             <div className="stats-grid grid grid-cols-[1fr_1fr_1fr_2fr] gap-4">
+  {/* Storage Used Card */}
+  <Statcard />
+  <StatCard2 />
+  <Statcard3 />
+  <Statcard4 />
+</div>
               {/* Projects Table Section */}
               <ProjectTable
                 projects={projects}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
-            </div>
+            {/* </div> */}
           </div>
           <div></div>
         </div>

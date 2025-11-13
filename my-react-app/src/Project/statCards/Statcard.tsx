@@ -4,6 +4,7 @@ const Statcard = () => {
   return (
     <div className="card-container">
       <div className="card">
+        <div className="bouncelight"></div>
         <div className="card-content">
           <div className="stat-header">
             <svg

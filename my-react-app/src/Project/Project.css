@@ -1299,20 +1299,3 @@ background: #323232;
     font-size: 10px;
   }
 }
-.content-page{
-   width: 371px;
-  height: 219px;
-  flex-shrink: 0;
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.01);
-  box-shadow:
-    8px 8px 57px -34px rgba(0, 0, 0, 0.25) inset,
-    2.702px 2.702px 0 -2.35px #333 inset,
-    -2.702px -2.702px 0 -2.35px #262626 inset,
-    2.702px 2.702px 1.351px -2.702px #FFF inset,
-    -2.702px -2.702px 1.351px -2.702px #FFF inset,
-    0 0 8.106px 0 rgba(255, 255, 255, 0.10) inset,
-    17px 17px 43.232px -8px #F5F5F5 inset,
-    -17px -17px 43.232px -8px #131313 inset,
-    0 4px 40px -10px rgba(0, 0, 0, 0.20);
-}

@@ -2,9 +2,10 @@ import "./StatCard2.css";
 import bitcoin from "../../assets/image 97.svg";
 const StatCard2 = () => {
   return (
-    <div className="stat-card-2">
-      <div className="glasseffect"></div>
-      <div className="container">
+    <div className="card2-container">
+      <div className="card2">
+        <div className="bouncelight2"></div>
+        <div className="container">
         <div className="stat2-card">
           <div className="trend-indicator">
             <svg
@@ -47,6 +48,7 @@ const StatCard2 = () => {
           <div className="bitcoin-coin">
             <img src={bitcoin} alt="bit coin" />
           </div>
+        </div>
         </div>
       </div>
     </div>

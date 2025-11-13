@@ -1,136 +1,246 @@
-.glass-effect{
-    width: 452px;
-height: 226px;
+/* ===== OUTER CONTAINER (glass border frame) ===== */
+.statcard4-outer-container {
+  display: flex;
+  width: 100%;
+  max-width: 320px;          /* was 560px */
+  height: 220px;             /* was 380px */
+  padding: 4px;              /* was 5.692px */
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;       /* was 32px */
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    /* Deep inner shadows for depth */
+    8.036px 8.036px 57.253px -34.151px rgba(0, 0, 0, 0.25) inset,
+    2.714px 2.714px 4.018px -2.36px #333 inset,
+    -2.714px -2.714px 0 -2.36px #262626 inset,
+    /* Bright highlights for glass effect */
+    2.714px 2.714px 10.396px -2.714px rgba(255, 255, 255, 0.20) inset,
+    -2.714px -2.714px 8.387px -2.714px rgba(255, 255, 255, 0.20) inset,
+    0 0 8.142px 0 rgba(255, 255, 255, 0.10) inset,
+    /* Large gradient shadows */
+    17.076px 17.076px 43.424px -8.036px #F5F5F5 inset,
+    -17.076px -17.076px 43.424px -8.036px #131313 inset,
+    /* Outer drop shadow for elevation */
+    0 5.022px 44.196px -10.044px rgba(0, 0, 0, 0.35),
+    0 8px 24px -4px rgba(0, 0, 0, 0.25);
 }
 
+/* ===== INNER CONTAINER (main card) ===== */
 .statcard4-container {
+  display: flex;
   position: relative;
   width: 100%;
-  max-width: 850px;
-  height: 220px;
-  border-radius: 24px;
+  height: 100%;
+  border-radius: 20px;       /* was 26px */
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  /* Glassy effect background */
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  /* Subtle inner glow */
+  background: linear-gradient(146deg, rgba(113, 117, 116, 0.85) 17.02%, rgba(55, 61, 60, 0.85) 76.92%);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    /* Soft ambient glow */
+    0 0 60.839px -24.475px rgba(40, 47, 56, 0.31) inset,
+    /* Top-left bright highlight */
+    3.496px 3.496px 21.096px -4.662px rgba(255, 255, 255, 0.45) inset,
+    /* Bottom-right dark shadow */
+    -3.496px -3.496px 19.813px -8.158px rgba(0, 0, 0, 0.15) inset,
+    /* Outer shadow for depth */
+    0 5.022px 35.156px -8.036px rgba(0, 0, 0, 0.12);
+  background-blend-mode: plus-lighter;
+  backdrop-filter: blur(10.044px);
 }
 
 .statcard4-content {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  padding: 50px;
-  flex: 1;
-  /* Enhanced glass layer */
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 24px 0 0 24px;
+  display: flex;
+  align-items: center;
+  padding: 20px;             /* was 40px */
+  background: linear-gradient(90deg, #27302F 23.89%, rgba(0, 0, 0, 0.00) 100%);
 }
 
 .statcard4-text {
-  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                 /* was 16px */
+  max-width: 220px;          /* was 280px */
 }
 
 .statcard4-title {
-  font-size: 48px;
+  color: #ffffff;
+  font-size: 22px;           /* was 32px */
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 20px 0;
-  letter-spacing: -0.5px;
+  margin: 0;
+  letter-spacing: -0.3px;    /* slightly softer */
 }
 
 .statcard4-description {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0 0 32px 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;           /* was 14px */
+  line-height: 1.5;          /* was 1.6 */
+  margin: 0;
+  font-weight: 400;
 }
 
+/* ExploreButton spacing */
+.statcard4-text .glass-explore-btn {
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+/* Optional: if you still use this class somewhere */
 .statcard4-button {
-  background: rgba(255, 255, 255, 0.15);
+  align-self: flex-start;
+  padding: 8px 22px;         /* smaller button */
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 14px 50px;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 50px;
+  border: 1.2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .statcard4-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
 }
 
 .statcard4-image {
   position: absolute;
+  top: 0;
   right: 0;
-  top: 0;
-  width: 60%;
-  height: 100%;
-  z-index: 1;
-}
-
-.statcard4-image::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.4) 30%,
-    rgba(0, 0, 0, 0.1) 70%,
-    transparent 100%
-  );
   z-index: 1;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 .statcard4-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center right;
 }
 
-/* Responsive design */
+/* ===== BOUNCE LIGHT (subtle highlight) ===== */
+.bouncelight4 {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;       /* match container */
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow:
+    inset -2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px -2px 8px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
+  .statcard4-outer-container {
+    max-width: 100%;
+    height: 230px;
+    border-radius: 20px;
+    padding: 4px;
+  }
+
   .statcard4-container {
-    height: auto;
-    min-height: 400px;
+    border-radius: 18px;
+  }
+
+  .bouncelight4 {
+    border-radius: 18px;
   }
 
   .statcard4-content {
-    padding: 30px;
+    padding: 18px;
+  }
+
+  .statcard4-text {
+    gap: 8px;
+    max-width: 210px;
   }
 
   .statcard4-title {
-    font-size: 36px;
+    font-size: 20px;
   }
 
   .statcard4-description {
-    font-size: 14px;
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .statcard4-outer-container {
+    height: 210px;
+    border-radius: 18px;
+    padding: 3px;
   }
 
-  .statcard4-image {
-    width: 100%;
-    opacity: 0.3;
+  .statcard4-container {
+    border-radius: 16px;
+  }
+
+  .bouncelight4 {
+    border-radius: 16px;
+  }
+
+  .statcard4-content {
+    padding: 16px;
+  }
+
+  .statcard4-text {
+    gap: 6px;
+    max-width: 190px;
+  }
+
+  .statcard4-title {
+    font-size: 18px;
+  }
+
+  .statcard4-description {
+    font-size: 10.5px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 360px) {
+  .statcard4-outer-container {
+    height: 190px;
+    border-radius: 16px;
+    padding: 3px;
+  }
+
+  .statcard4-container {
+    border-radius: 14px;
+  }
+
+  .bouncelight4 {
+    border-radius: 14px;
+  }
+
+  .statcard4-content {
+    padding: 14px;
+  }
+
+  .statcard4-text {
+    gap: 6px;
+    max-width: 170px;
+  }
+
+  .statcard4-title {
+    font-size: 16px;
+  }
+
+  .statcard4-description {
+    font-size: 10px;
   }
 }
