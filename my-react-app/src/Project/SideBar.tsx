@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logo from '../assets/Background+Border.svg';
 import { ClipboardList } from 'lucide-react';
 import './Sidebar.css'
-const SideBar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(true);
+
+interface SideBarProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const SideBar: React.FC<SideBarProps> = ({ isOpen, setIsOpen }) => {
   const menuItems = [
     { label: 'Label', count: null, icon: ClipboardList },
     { label: 'Label', count: '100+', icon: ClipboardList },

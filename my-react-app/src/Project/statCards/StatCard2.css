@@ -174,8 +174,8 @@
 /* bitcoin coin */
 .coin-icon {
   position: absolute;
-  right: 20px;
-  top: 40%;
+  right: 2px;
+  top: 50%;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -185,8 +185,8 @@
 }
 
 .bitcoin-coin {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;

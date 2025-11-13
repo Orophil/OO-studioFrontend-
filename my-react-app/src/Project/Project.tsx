@@ -13,6 +13,7 @@ import Statcard4 from "./statCards/Statcard4";
 const Project: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   // Sample project data - matching reference image
   const projects = [
@@ -90,14 +91,13 @@ const Project: React.FC = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 backdrop-blur-[10px]">
+        <div className="w-full h-screen flex px-6 gap-6 py-6">
+          <SideBar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
-        <div className="w-full h-screen grid grid-cols-[auto_1fr] px-6">
-          <SideBar />
-
-          {/* Main Content Area */}
-          <div className="min-w-0 w-full h-screen grid grid-rows-[auto_1fr] overflow-hidden">
+          {/* Main Content Area with project-container */}
+          <div className={`project-container flex-1 flex flex-col ${isSidebarOpen ? 'sidebar-open' : 'sidebar-closed'}`}>
             {/* Top Navigation Bar */}
-            <div className="top-nav px-6">
+            <div className="top-nav">
               <div className="top-nav-left">
                 <div className="top-nav-title-row">
                   <span className="chinese-letter">환영합니다,</span>
@@ -141,28 +141,27 @@ const Project: React.FC = () => {
                   <span className="notification-dot"></span>
                 </div>
                 <ProfileButton />
-                            </div>
+              </div>
             </div>
-             
+
             {/* Scrollable Content */}
-            {/* <div className="main-content"> */}
-              {/* Stats Cards Grid */}              
-             <div className="stats-grid grid grid-cols-[1fr_1fr_1fr_2fr] gap-4">
-  {/* Storage Used Card */}
-  <Statcard />
-  <StatCard2 />
-  <Statcard3 />
-  <Statcard4 />
-</div>
+            <div className="flex-1 overflow-y-auto overflow-x-hidden">
+              {/* Stats Cards Grid */}
+              <div className="stats-grid grid grid-cols-[1fr_1fr_1fr_2fr] gap-4">
+                {/* Storage Used Card */}
+                <Statcard />
+                <StatCard2 />
+                <Statcard3 />
+                <Statcard4 />
+              </div>
               {/* Projects Table Section */}
               <ProjectTable
                 projects={projects}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
               />
-            {/* </div> */}
+            </div>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
